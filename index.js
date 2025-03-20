@@ -16,6 +16,7 @@ const API_SECRET = process.env.API_SECRET;
 // Routes
 app.use('/', uploadRoute);
 
+// cloudinary
 import { v2 as cloudinary } from 'cloudinary';
 
 (async function () {
@@ -24,7 +25,7 @@ import { v2 as cloudinary } from 'cloudinary';
     cloudinary.config({
         cloud_name: 'dvurz2fdw',
         api_key: API_KEY,
-        api_secret: API_SECRET 
+        api_secret: API_SECRET
     });
 
     // Optimize delivery by resizing and applying auto-format and auto-quality
@@ -46,6 +47,7 @@ import { v2 as cloudinary } from 'cloudinary';
     console.log(autoCropUrl);
 })();
 
+// Mongoose
 mongoose.connect(MONGO_URL)
     .then(() => {
         console.log("Database Active");

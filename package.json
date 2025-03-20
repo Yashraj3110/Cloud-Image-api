@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon index.js",
     "vercel-build": "node index.js"
   },
   "author": "",
